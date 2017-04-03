@@ -1,3 +1,4 @@
+use drums
 db.createCollection("admin");
 db.createCollection("comments");
 db.createCollection("cymbals");

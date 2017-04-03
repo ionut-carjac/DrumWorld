@@ -1,3 +1,4 @@
+use drums
 db.drums.insert([
 {
 	name:"Mapex 14x5,5\" Special Panther Maple",
