@@ -1,0 +1,13 @@
+<?php
+	class Cymbal{
+		private $id;
+		private $name;
+		private $description;
+		private $price;
+		private $producer;
+		private $stock;
+		private $sales;
+		
+		
+	}
+?>
