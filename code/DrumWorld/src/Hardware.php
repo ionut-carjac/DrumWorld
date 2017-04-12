@@ -1,5 +1,5 @@
 <?php
-	class Cymbal{
+	class Hardware{
 		private $id;
 		private $name;
 		private $description;

@@ -1,5 +1,5 @@
 <?php
-	class Cymbal{
+	class Drum{
 		private $id;
 		private $name;
 		private $description;

@@ -1,5 +1,5 @@
 <?php
-	class Cymbal{
+	class Set{
 		private $id;
 		private $name;
 		private $description;
