@@ -29,6 +29,7 @@ echo"<table>";
 			echo"<td>".$row['name']."</td>";
 			echo"<td>".$row['price']."</td>";
 		echo"</tr>";
+		echo"Test";
 	
 }
 echo"</table>";
