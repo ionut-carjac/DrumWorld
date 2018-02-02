@@ -1,0 +1,267 @@
+[33mcommit d446aa941bdcb94825db0642738c6ab2892d1856[m
+Author: Ionut Carjac <ionut.carjac@pb.com>
+Date:   Tue Dec 5 11:11:51 2017 +0200
+
+    created new framework
+
+[1mdiff --git a/code/.metadata/.lock b/code/.metadata/.lock[m
+[1mdeleted file mode 100644[m
+[1mindex e69de29..0000000[m
+[1mdiff --git a/code/.metadata/.log b/code/.metadata/.log[m
+[1mdeleted file mode 100644[m
+[1mindex 1bf4c2f..0000000[m
+[1m--- a/code/.metadata/.log[m
+[1m+++ /dev/null[m
+[36m@@ -1,244 +0,0 @@[m
+[31m-!SESSION 2017-04-11 10:50:06.720 -----------------------------------------------[m
+[31m-eclipse.buildId=3.4.2.201308081805[m
+[31m-java.version=1.6.0_24[m
+[31m-java.vendor=Sun Microsystems Inc.[m
+[31m-BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US[m
+[31m-Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\xampp\htdocs\Licenta\DrumWorld\code[m
+[31m-[m
+[31m-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-04-11 10:50:09.615[m
+[31m-!MESSAGE Connection to http://download.aptana.com/studio3-rcp/plugin/update/p2.index failed on download.aptana.com. Retry attempt 0 started[m
+[31m-!STACK 0[m
+[31m-java.net.UnknownHostException: download.aptana.com[m
+[31m-	at java.net.PlainSocketImpl.connect(Unknown Source)[m
+[31m-	at java.net.SocksSocketImpl.connect(Unknown Source)[m
+[31m-	at java.net.Socket.connect(Unknown Source)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)[m
+[31m-	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)[m
+[31m-	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)[m
+[31m-	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)[m
+[31m-	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)[m
+[31m-	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)[m
+[31m-	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1142)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:710)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:889)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)[m
+[31m-	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:349)[m
+[31m-	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:295)[m
+[31m-	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:87)[m
+[31m-	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:137)[m
+[31m-	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:721)[m
+[31m-	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:640)[m
+[31m-	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)[m
+[31m-	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)[m
+[31m-	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:150)[m
+[31m-	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:128)[m
+[31m-	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:72)[m
+[31m-[m
+[31m-!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-04-11 10:50:09.833[m
+[31m-!MESSAGE Unknown Host: http://download.aptana.com/studio3-rcp/plugin/update/content.xml[m
+[31m-!STACK 0[m
+[31m-java.net.UnknownHostException: download.aptana.com[m
+[31m-	at java.net.PlainSocketImpl.connect(Unknown Source)[m
+[31m-	at java.net.SocksSocketImpl.connect(Unknown Source)[m
+[31m-	at java.net.Socket.connect(Unknown Source)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)[m
+[31m-	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)[m
+[31m-	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)[m
+[31m-	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)[m
+[31m-	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)[m
+[31m-	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)[m
+[31m-	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:227)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)[m
+[31m-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)[m
+[31m-[m
+[31m-!ENTRY com.aptana.core 4 0 2017-04-11 11:14:04.456[m
+[31m-!MESSAGE (Build 3.4.2.201308081805) [ERROR]  The process cannot access the file because another process has locked a portion of the file[m
+[31m-!STACK 0[m
+[31m-java.io.IOException: The process cannot access the file because another process has locked a portion of the file[m
+[31m-	at java.io.FileInputStream.readBytes(Native Method)[m
+[31m-	at java.io.FileInputStream.read(Unknown Source)[m
+[31m-	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)[m
+[31m-	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)[m
+[31m-	at sun.nio.cs.StreamDecoder.read(Unknown Source)[m
+[31m-	at java.io.InputStreamReader.read(Unknown Source)[m
+[31m-	at java.io.BufferedReader.fill(Unknown Source)[m
+[31m-	at java.io.BufferedReader.read1(Unknown Source)[m
+[31m-	at java.io.BufferedReader.read(Unknown Source)[m
+[31m-	at java.io.Reader.read(Unknown Source)[m
+[31m-	at com.aptana.core.util.IOUtil.read(IOUtil.java:108)[m
+[31m-	at com.aptana.git.core.model.GitIndex.diffForFile(GitIndex.java:590)[m
+[31m-	at com.aptana.git.ui.internal.actions.CommitDialog.updateDiff(CommitDialog.java:818)[m
+[31m-	at com.aptana.git.ui.internal.actions.CommitDialog.access$2(CommitDialog.java:789)[m
+[31m-	at com.aptana.git.ui.internal.actions.CommitDialog$1.run(CommitDialog.java:189)[m
+[31m-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)[m
+[31m-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)[m
+[31m-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4140)[m
+[31m-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3757)[m
+[31m-	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)[m
+[31m-	at org.eclipse.jface.window.Window.open(Window.java:801)[m
+[31m-	at com.aptana.git.ui.internal.actions.CommitHandler.doExecute(CommitHandler.java:34)[m
+[31m-	at com.aptana.git.ui.internal.actions.AbstractGitHandler.execute(AbstractGitHandler.java:108)[m
+[31m-	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:293)[m
+[31m-	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)[m
+[31m-	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)[m
+[31m-	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)[m
+[31m-	at org.eclipse.ui.internal.handlers.SlaveHandlerService.executeCommand(SlaveHandlerService.java:241)[m
+[31m-	at org.eclipse.ui.internal.handlers.SlaveHandlerService.executeCommand(SlaveHandlerService.java:241)[m
+[31m-	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetSelection(CommandContributionItem.java:829)[m
+[31m-	at org.eclipse.ui.menus.CommandContributionItem.access$19(CommandContributionItem.java:815)[m
+[31m-	at org.eclipse.ui.menus.CommandContributionItem$5.handleEvent(CommandContributionItem.java:805)[m
+[31m-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)[m
+[31m-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)[m
+[31m-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4165)[m
+[31m-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3754)[m
+[31m-	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)[m
+[31m-	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)[m
+[31m-	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)[m
+[31m-	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)[m
+[31m-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)[m
+[31m-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)[m
+[31m-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)[m
+[31m-	at com.aptana.rcp.IDEApplication.start(IDEApplication.java:125)[m
+[31m-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)[m
+[31m-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)[m
+[31m-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)[m
+[31m-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)[m
+[31m-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)[m
+[31m-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[m
+[31m-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)[m
+[31m-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)[m
+[31m-	at java.lang.reflect.Method.invoke(Unknown Source)[m
+[31m-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)[m
+[31m-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)[m
+[31m-	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)[m
+[31m-!SESSION 2017-04-11 11:35:38.108 -----------------------------------------------[m
+[31m-eclipse.buildId=3.4.2.201308081805[m
+[31m-java.version=1.6.0_24[m
+[31m-java.vendor=Sun Microsystems Inc.[m
+[31m-BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US[m
+[31m-Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\xampp\htdocs\Licenta\DrumWorld\code[m
+[31m-[m
+[31m-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-04-11 11:35:41.232[m
+[31m-!MESSAGE Connection to http://download.aptana.com/studio3-rcp/plugin/update/p2.index failed on download.aptana.com. Retry attempt 0 started[m
+[31m-!STACK 0[m
+[31m-java.net.UnknownHostException: download.aptana.com[m
+[31m-	at java.net.PlainSocketImpl.connect(Unknown Source)[m
+[31m-	at java.net.SocksSocketImpl.connect(Unknown Source)[m
+[31m-	at java.net.Socket.connect(Unknown Source)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)[m
+[31m-	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)[m
+[31m-	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)[m
+[31m-	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)[m
+[31m-	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)[m
+[31m-	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)[m
+[31m-	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1142)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:710)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:889)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)[m
+[31m-	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:349)[m
+[31m-	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:295)[m
+[31m-	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:87)[m
+[31m-	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:137)[m
+[31m-	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:721)[m
+[31m-	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:640)[m
+[31m-	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)[m
+[31m-	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)[m
+[31m-	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:150)[m
+[31m-	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:128)[m
+[31m-	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:72)[m
+[31m-[m
+[31m-!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-04-11 11:35:41.454[m
+[31m-!MESSAGE Unknown Host: http://download.aptana.com/studio3-rcp/plugin/update/content.xml[m
+[31m-!STACK 0[m
+[31m-java.net.UnknownHostException: download.aptana.com[m
+[31m-	at java.net.PlainSocketImpl.connect(Unknown Source)[m
+[31m-	at java.net.SocksSocketImpl.connect(Unknown Source)[m
+[31m-	at java.net.Socket.connect(Unknown Source)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)[m
+[31m-	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)[m
+[31m-	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)[m
+[31m-	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)[m
+[31m-	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)[m
+[31m-	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)[m
+[31m-	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:227)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)[m
+[31m-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)[m
+[31m-!SESSION 2017-04-12 17:45:56.363 -----------------------------------------------[m
+[31m-eclipse.buildId=3.4.2.201308081805[m
+[31m-java.version=1.6.0_24[m
+[31m-java.vendor=Sun Microsystems Inc.[m
+[31m-BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US[m
+[31m-Command-line arguments:  -os win32 -ws win32 -arch x86[m
+[31m-[m
+[31m-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-04-12 17:46:16.578[m
+[31m-!MESSAGE Connection to http://download.aptana.com/studio3-rcp/plugin/update/p2.index failed on download.aptana.com. Retry attempt 0 started[m
+[31m-!STACK 0[m
+[31m-java.net.UnknownHostException: download.aptana.com[m
+[31m-	at java.net.PlainSocketImpl.connect(Unknown Source)[m
+[31m-	at java.net.SocksSocketImpl.connect(Unknown Source)[m
+[31m-	at java.net.Socket.connect(Unknown Source)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)[m
+[31m-	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)[m
+[31m-	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)[m
+[31m-	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)[m
+[31m-	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)[m
+[31m-	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)[m
+[31m-	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1142)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:710)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:889)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)[m
+[31m-	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:349)[m
+[31m-	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:295)[m
+[31m-	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:87)[m
+[31m-	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:137)[m
+[31m-	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:721)[m
+[31m-	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:640)[m
+[31m-	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)[m
+[31m-	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)[m
+[31m-	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:150)[m
+[31m-	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:128)[m
+[31m-	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:72)[m
+[31m-[m
+[31m-!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-04-12 17:46:16.906[m
+[31m-!MESSAGE Unknown Host: http://download.aptana.com/studio3-rcp/plugin/update/content.xml[m
+[31m-!STACK 0[m
+[31m-java.net.UnknownHostException: download.aptana.com[m
+[31m-	at java.net.PlainSocketImpl.connect(Unknown Source)[m
+[31m-	at java.net.SocksSocketImpl.connect(Unknown Source)[m
+[31m-	at java.net.Socket.connect(Unknown Source)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)[m
+[31m-	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)[m
+[31m-	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)[m
+[31m-	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)[m
+[31m-	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)[m
+[31m-	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)[m
+[31m-	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)[m
+[31m-	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:227)[m
+[31m-	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)[m
+[31m-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)[m
+[1mdiff --git a/code/.metadata/.plugins/com.aptana.core.io/connections.22 b/code/.metadata/.plugins/com.aptana.core.io/connections.22[m
+[1mdeleted file mode 100644[m
+[1mindex 46f1522..0000000[m
+[1m--- a/code/.metadata/.plugins/com.aptana.core.io/connections.22[m
+[1m+++ /dev/null[m
+[36m@@ -1,2 +0,0 @@[m
+[31m-<?xml version="1.0" encoding="UTF-8"?>[m
+[31m-<connections/>[m
