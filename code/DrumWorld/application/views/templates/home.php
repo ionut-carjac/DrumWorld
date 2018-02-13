@@ -19,11 +19,7 @@
 			<div align = "center" color = "white">
 				<h1> Drum <img src="<?php echo base_url(); ?>assets/pics/logo/logo1.jpg" width="100" height= "70"> World </h1>
 			</div>
-			<div class = "row-fluid">
-				
 		</div>
 
-         
-	</div>
 </BODY>
 </HTML>	

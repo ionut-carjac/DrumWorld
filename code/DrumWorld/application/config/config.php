@@ -24,7 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'http://localhost:8888/Licenta/DrumWorld/code/DrumWorld/';
-$config['base_url'] = '';
+//$config['base_url'] = '';
+$config['base_url']  =  "http://".$_SERVER['HTTP_HOST']."/Licenta/DrumWorld/code/DrumWorld/";
 
 /*
 |--------------------------------------------------------------------------
