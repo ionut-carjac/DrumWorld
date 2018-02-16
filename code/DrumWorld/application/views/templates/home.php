@@ -2,7 +2,7 @@
 	<HEAD>
 		<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-2">
 
-		<TITLE><?php echo $title?></TITLE>
+		<TITLE><?php echo ucfirst($title)?></TITLE>
 
 		<LINK REL ="stylesheet" HREF="<?php echo base_url()?>assets/css/drum.css" TYPE="text/css">
 		<LINK REL ="stylesheet" HREF="<?php echo base_url(); ?>assets/css/bootstrap/css/bootstrap.min.css" TYPE="text/css">
@@ -19,6 +19,7 @@
 			<div align = "center" color = "white">
 				<h1> Drum <img src="<?php echo base_url(); ?>assets/pics/logo/logo1.jpg" width="100" height= "70"> World </h1>
 			</div>
+			
 		</div>
 
 </BODY>

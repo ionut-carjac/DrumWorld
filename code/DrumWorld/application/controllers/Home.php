@@ -9,11 +9,9 @@ class Home extends CI_Controller {
 
 		$data['title'] = $page;
 
-		//$this -> load -> view('templates/header');
 		$this -> load -> view('templates/' . $page, $data);
-		$data['menus'] = array("Home", "Cymbals", "Drums", "Hardware", "Sets", "Shopping Cart");
-		$this -> load -> view('menu/menu', $data);
-		//$this -> load -> view('templates/footer');
+		$this -> load -> view('menu/menu');
+		$this -> load -> view('templates/home_content');
 
 	}
 
