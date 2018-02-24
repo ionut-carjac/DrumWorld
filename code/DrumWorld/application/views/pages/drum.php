@@ -1,6 +1,13 @@
 <div class="container" align="center">
-	TEST DRUM PAGE
+	<h1> DRUM PAGE </h1>
 	<BR>
+		<?php 
+			foreach($drum_items as $di){
+				echo '<b>Name</b> : ';
+				print_r( $di->getName());
+				echo "<br/>";
+			}
+		?>
 	<BR>
 	<p>
 		<b>Consumer's Opinion</b>
