@@ -1,10 +1,10 @@
 <div class="container" align="center">
-	<h1> DRUMS Page </h1>
+	<h1> HARDWARE Page </h1>
 	<BR>
 		<?php 
-			foreach($drum_items as $di){
+			foreach($hard_items as $hi){
 				echo '<b>Name</b> : ';
-				print_r( $di->getName());
+				print_r( $hi->getName());
 				echo "<br/>";
 			}
 		?>

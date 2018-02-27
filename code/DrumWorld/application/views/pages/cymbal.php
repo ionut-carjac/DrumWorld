@@ -1,11 +1,12 @@
 <div class="container" align="center">
-	<h1> DRUMS Page </h1>
+	<h1> Cymbals Page </h1>
 	<BR>
 		<?php 
-			foreach($drum_items as $di){
+			foreach($cymbal_items as $ci){
 				echo '<b>Name</b> : ';
-				print_r( $di->getName());
+				print_r( $ci->getName());
 				echo "<br/>";
 			}
 		?>
+	<BR>
 </div>

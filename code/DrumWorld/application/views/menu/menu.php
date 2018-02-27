@@ -5,26 +5,26 @@
 				<a class="nav-link" href="<?php echo base_url()?>">Home</a>
 			</li>
 			<li class="nav-item" style="font-size:30px">
-				<a class="nav-link" href="<?php echo base_url()?>index.php/drum/view/">Cymbals</a>
+				<a class="nav-link" href="<?php echo base_url()?>index.php/cymbal/view/">Cymbals</a>
 			</li>
 			<li class="nav-item" style="font-size:30px">
 				<a class="nav-link" href="<?php echo base_url()?>index.php/drum/view/">Drums</a>
 			</li>
 			<li class="nav-item" style="font-size:30px">
-				<a class="nav-link" href="<?php echo base_url()?>index.php/drum/view/">Hardware</a>
+				<a class="nav-link" href="<?php echo base_url()?>index.php/hard/view/">Hardware</a>
 			</li>
 			<li class="nav-item" style="font-size:30px">
-				<a class="nav-link" href="<?php echo base_url()?>index.php/drum/view/">Sets</a>
+				<a class="nav-link" href="<?php echo base_url()?>index.php/set/view/">Sets</a>
 			</li>
 			<li class="nav-item" style="font-size:30px">
-				<a class="nav-link" href="<?php echo base_url()?>index.php/drum/view/">Shopping Cart</a>
+				<a class="nav-link" href="<?php echo base_url()?>index.php/cart/view/">Shopping Cart</a>
 			</li>
-			<li class="nav-item" style="font-size:30px">
+			<!-- <li class="nav-item" style="font-size:30px">
 				<input type="text" name="searchFor"  value="Looking For...">
 			</li>
 			<li class="nav-item" style="font-size:30px">
 				<input type="button" name="searchB"  value="Search">
-			</li>
+			</li> -->
 		</ul>
 	</nav>
 </div>

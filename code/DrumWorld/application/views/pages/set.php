@@ -1,10 +1,10 @@
 <div class="container" align="center">
-	<h1> DRUMS Page </h1>
+	<h1> SETS Page </h1>
 	<BR>
 		<?php 
-			foreach($drum_items as $di){
+			foreach($set_items as $si){
 				echo '<b>Name</b> : ';
-				print_r( $di->getName());
+				print_r( $si->getName());
 				echo "<br/>";
 			}
 		?>

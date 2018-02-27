@@ -1,5 +1,5 @@
 <?php
-class Drums_model extends CI_Model {
+class Cymbals_model extends CI_Model {
 
 	// Now you can access the methods using $this->mongo_db->
 
@@ -8,19 +8,19 @@ class Drums_model extends CI_Model {
 		$this -> load -> library('mongo_db', array('activate' => 'default'), 'mongo_db');
 	}
 
-	public function getDrums() {
-		$res = $this -> mongo_db -> get('drums');
+	public function getCymbals() {
+		$res = $this -> mongo_db -> get('cymbals');
 		return $this -> toProductObject($res);
 
 	}
 
 	private function toProductObject($res) {
 		$poArray = array();
-		foreach ($res as $mongo_drum) {
+		foreach ($res as $mongo_cymbal) {
 			$po = new ProductObject();
-			$po -> setType('drums');
-			$po -> setId($mongo_drum['_id']);
-			$po -> setName($mongo_drum['name']);
+			$po -> setType('cymbals');
+			$po -> setId($mongo_cymbal['_id']);
+			$po -> setName($mongo_cymbal['name']);
 			
 			array_push($poArray, $po);
 		}
