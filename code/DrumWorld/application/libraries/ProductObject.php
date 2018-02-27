@@ -2,8 +2,9 @@
 class ProductObject {
 	private $type;
 	private $id;
+	private $picName;
 	private $name;
-	private $descriptoin;
+	private $description;
 	private $price;
 	private $producer;
 	private $stock;
@@ -16,6 +17,14 @@ class ProductObject {
 
 	public function setType($type) {
 		$this -> type = $type;
+	}
+	
+	public function getPicName() {
+		return $this -> picName;
+	}
+
+	public function setPicName($picName) {
+		$this -> picName = $picName;
 	}
 
 	public function getId() {
@@ -39,7 +48,7 @@ class ProductObject {
 	}
 
 	public function setDescription($description) {
-		$this -> descriptoin = $description;
+		$this -> description = $description;
 	}
 
 	public function getPrice() {

@@ -21,13 +21,16 @@ class Sets_model extends CI_Model {
 			$po -> setType('sets');
 			$po -> setId($mongo_set['_id']);
 			$po -> setName($mongo_set['name']);
-			
+			$po -> setDescription($mongo_set['description']);
+			$po -> setPrice($mongo_set['price']);
+			$po -> setProducer($mongo_set['producer']);
+			$po -> setStock($mongo_set['stock']);
+			$po -> setSales($mongo_set['sales']);
+
 			array_push($poArray, $po);
 		}
 		return $poArray;
 
 	}
-
-
 
 }

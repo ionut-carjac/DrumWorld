@@ -21,12 +21,16 @@ class Cymbals_model extends CI_Model {
 			$po -> setType('cymbals');
 			$po -> setId($mongo_cymbal['_id']);
 			$po -> setName($mongo_cymbal['name']);
-			
+			$po -> setDescription($mongo_cymbal['description']);
+			$po -> setPrice($mongo_cymbal['price']);
+			$po -> setProducer($mongo_cymbal['producer']);
+			$po -> setStock($mongo_cymbal['stock']);
+			$po -> setSales($mongo_cymbal['sales']);
+
 			array_push($poArray, $po);
 		}
 		return $poArray;
 
 	}
-
 
 }

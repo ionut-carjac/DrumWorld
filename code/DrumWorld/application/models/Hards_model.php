@@ -21,10 +21,16 @@ class Hards_model extends CI_Model {
 			$po -> setType('hards');
 			$po -> setId($mongo_hard['_id']);
 			$po -> setName($mongo_hard['name']);
-			
+			$po -> setDescription($mongo_hard['description']);
+			$po -> setPrice($mongo_hard['price']);
+			$po -> setProducer($mongo_hard['producer']);
+			$po -> setStock($mongo_hard['stock']);
+			$po -> setSales($mongo_hard['sales']);
+
 			array_push($poArray, $po);
 		}
 		return $poArray;
 
 	}
+
 }
