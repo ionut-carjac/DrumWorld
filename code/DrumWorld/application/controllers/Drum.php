@@ -17,7 +17,7 @@ class Drum extends CI_Controller {
 		// $this->load->library("pagination");
 		
 		$config = array();
-        $config["base_url"] = base_url() . "drum/view";
+        $config["base_url"] = base_url() . "drum/viewDrum";
         $config["total_rows"] = $this->drums_model->countDrums();
         $config["per_page"] = 5;
         $config["uri_segment"] = 3;
@@ -25,14 +25,24 @@ class Drum extends CI_Controller {
 		$this->pagination->initialize($config);
 
 		$data['title'] = $page;
-		$data['menus'] = array("Home", "Cymbals", "Drums", "Hardware", "Sets", "Shopping Cart");
 		$data['drum_items'] = $this -> drums_model -> getDrums();
         $data["links"] = $this->pagination->create_links();
 
 		$this -> load -> view('templates/home', $data);
-		$this -> load -> view('menu/menu', $data);
+		$this -> load -> view('menu/menu');
 		$this -> load -> view('pages/drum', $data);
 
+	}
+	
+	public function viewDrum($id){
+		
+		$drum_item = $this->drums_model->getDrumById($id);
+		$data['title'] = "Drum Item";
+		$data['drum_item'] = $drum_item;
+		
+		$this -> load -> view('templates/home', $data);
+		$this -> load -> view('menu/menu');
+		$this -> load -> view('pages/drum_content', $data);
 	}
 
 }
