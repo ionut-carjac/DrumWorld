@@ -18,7 +18,7 @@ class Hards_model extends CI_Model {
 		$poArray = array();
 		foreach ($res as $mongo_hard) {
 			$po = new ProductObject();
-			$po -> setType('hards');
+			$po -> setType('hards'); 
 			$po -> setId($mongo_hard['_id']);
 			$po -> setName($mongo_hard['name']);
 			$po -> setDescription($mongo_hard['description']);

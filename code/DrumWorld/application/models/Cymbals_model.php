@@ -19,7 +19,7 @@ class Cymbals_model extends CI_Model {
 		foreach ($res as $mongo_cymbal) {
 			$po = new ProductObject();
 			$po -> setType('cymbals');
-			$po -> setId($mongo_cymbal['_id']);
+			$po -> setId($mongo_cymbal['_id']->__toString());
 			$po -> setName($mongo_cymbal['name']);
 			$po -> setDescription($mongo_cymbal['description']);
 			$po -> setPrice($mongo_cymbal['price']);

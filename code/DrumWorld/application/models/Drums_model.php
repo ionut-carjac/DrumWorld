@@ -10,32 +10,48 @@ class Drums_model extends CI_Model {
 
 	public function getDrums() {
 		$res = $this -> mongo_db -> get('drums');
-		return $this -> toProductObject($res);
+		return $this -> toProductObjectList($res);
 
+	}
+
+	public function getDrumById($id) {
+		$res = $this -> mongo_db -> get_where('drums', array('_id' => new MongoId($id)));
+		foreach ($res as $mongo_drum) {
+			$po = $this -> toProductObject($mongo_drum);	
+			return $po;
+		}
+		
+		
 	}
 
 	public function countDrums() {
 		return $this -> mongo_db -> count("drums");
 	}
 
-	private function toProductObject($res) {
+	private function toProductObjectList($res) {
 		$poArray = array();
 		foreach ($res as $mongo_drum) {
-			$po = new ProductObject();
-			$po -> setType('drums');
-			$po -> setId($mongo_drum['_id']);
-			$po -> setPicName($mongo_drum['pic_name']);
-			$po -> setName($mongo_drum['name']);
-			$po -> setDescription($mongo_drum['description']);
-			$po -> setPrice($mongo_drum['price']);
-			$po -> setProducer($mongo_drum['producer']);
-			$po -> setStock($mongo_drum['stock']);
-			$po -> setSales($mongo_drum['sales']);
+			$po = $this -> toProductObject($mongo_drum);
 
 			array_push($poArray, $po);
 		}
 		return $poArray;
 
+	}
+
+	private function toProductObject($res) {
+		$po = new ProductObject();
+		$po -> setType('drums');
+		$po -> setId($res['_id'] -> __toString());
+		$po -> setPicName($res['pic_name']);
+		$po -> setName($res['name']);
+		$po -> setDescription($res['description']);
+		$po -> setPrice($res['price']);
+		$po -> setProducer($res['producer']);
+		$po -> setStock($res['stock']);
+		$po -> setSales($res['sales']);
+
+		return $po;
 	}
 
 }
