@@ -5,6 +5,7 @@ class Drum extends CI_Controller {
 		parent::__construct();
 		$this->load->model('drums_model');
 		$this -> load -> library("pagination");
+		$this->load->library('cart');
 	}
 
 	public function view($page = 'drum') {
