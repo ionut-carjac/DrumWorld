@@ -17,11 +17,30 @@ class Drums_model extends CI_Model {
 	public function getDrumById($id) {
 		$res = $this -> mongo_db -> get_where('drums', array('_id' => new MongoId($id)));
 		foreach ($res as $mongo_drum) {
-			$po = $this -> toProductObject($mongo_drum);	
+			$po = $this -> toProductObject($mongo_drum);
 			return $po;
 		}
-		
-		
+
+	}
+
+	public function fetchDrums($limit, $start) {
+		$query = $this -> mongo_db -> get("drums");
+		$res = array();
+		$counter = 1;
+
+		for ($i = $start; $i <= count($query) - 1; $i++) {
+
+			array_push($res, $query[$i]);
+
+			if ($counter == $limit) {
+				break;
+				echo 'Break was pushed<br/>';
+			}
+			$counter++;
+
+		}
+		return $this -> toProductObjectList($res);
+
 	}
 
 	public function countDrums() {
@@ -41,7 +60,7 @@ class Drums_model extends CI_Model {
 
 	private function toProductObject($res) {
 		$po = new ProductObject();
-		$po -> setType('drums');
+		$po -> setType('drum');
 		$po -> setId($res['_id'] -> __toString());
 		$po -> setPicName($res['pic_name']);
 		$po -> setName($res['name']);

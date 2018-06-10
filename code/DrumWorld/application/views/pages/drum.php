@@ -37,11 +37,37 @@
 						print_r($di -> getPrice());
 						print '</TD>';
 						print '<TD>';
-						?><input type="button" value="Add to Cart"><?php
+						?>
+							<?php
+
+							// Create form and send values in 'shopping/add' function.
+							echo form_open('cart/add');
+							echo form_hidden('id', $di -> getId());
+							echo form_hidden('name', $di -> getName());
+							echo form_hidden('price', $di -> getPrice());
+							echo form_hidden('type', $di -> getType());
+							?> 
+							<div id='add_button'>
+							<?php
+							$btn = array('class' => 'btn btn-info', 'value' => 'Add to Cart', 'name' => 'action');
+
+							// Submit Button.
+							echo form_submit($btn);
+							echo form_close();
+							?>
+							</div>
+
+						<?php
 						print '</TD>';
 						print '</TR>';
 						}
 		?>
 	</table>
-	<p><?php echo $links; ?></p>
+	
+
+	<ul class="pagination"><?php
+	foreach ($links as $link)
+		echo '<li>' . $link . '<li>';
+ ?></ul>
+		
 </div>

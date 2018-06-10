@@ -7,6 +7,17 @@
 		<LINK REL ="stylesheet" HREF="<?php echo base_url()?>assets/css/drum.css" TYPE="text/css">
 		<LINK REL ="stylesheet" HREF="<?php echo base_url(); ?>assets/css/bootstrap/css/bootstrap.min.css" TYPE="text/css">
 		<link REL="stylesheet" HREF="<?php echo base_url(); ?>assets/css/bootstrap/css/bootstrap-theme.css" TYPE="text/css">
+		<script type="text/javascript">
+		function clearCart() {
+			var result = confirm('Are you sure want to clear all bookings?');
+
+			if (result) {
+				window.location = "<?php echo base_url(); ?>index.php/cart/remove/all";
+			} else {
+				return false; // cancel button
+			}
+		}
+		</script>
 
 	</HEAD>
 

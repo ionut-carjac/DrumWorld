@@ -1,17 +1,98 @@
-	body{
-		background-image:url('../pics/background/drums.jpg');
-		background-repeat:no-repeat;
-		background-size: cover;
-	}
-	
-	#h33 {
-		font-family: Times New Roman, Times, serif; 
-		font-size: 16px; 
-		font-weight: bold; 
-		color: #333; 
-		font-style:italic;
-	}
-	
-	.container{
+body {
+	background-image: url('../pics/background/drums.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: "Lucida Sans";
+	font-size: 12px;
+}
+
+#h33 {
+	font-family: Times New Roman, Times, serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
+	font-style: italic;
+}
+
+.container {
 	background-color: white;
-	}
+}
+
+#wrap {
+	width: 1024px;
+}
+
+ul.products {
+	list-style-type: none;
+	width: 525px;
+	margin: 0;
+	padding: 0;
+}
+
+ul.products li {
+	background: #eeeeee;
+	border: 1px solid #d3d3d3;
+	padding: 5px;
+	width: 150px;
+	text-align: center;
+	float: left;
+	margin-right: 10px;
+}
+
+ul.products h3 {
+	margin: 0;
+	padding: 0px 0px 5px 0px;
+	font-size: 14px;
+}
+
+ul.products small {
+	display: block;
+}
+
+ul.products form fieldset {
+	border: 0px;
+}
+
+ul.products form label {
+	font-size: 12px;
+}
+
+ul.products form input[type=text] {
+	width: 18px;
+	background: #FFF;
+	border: 1px solid #d3d3d3;
+}
+
+#pagination {
+	margin: 40 40 0;
+}
+
+ul.pagination li a:hover, ul.pagination li a.current {
+	color: #FFFFFF;
+	box-shadow: 0px 1px #EDEDED;
+	-moz-box-shadow: 0px 1px #EDEDED;
+	-webkit-box-shadow: 0px 1px #EDEDED;
+}
+
+ul.pagination li a {
+	color: #0A7EC5;
+	border-color: #8DC5E6;
+	background: #F8FCFF;
+}
+ul.pagination li a:hover, ul.pagination li a.current {
+	text-shadow: 0px 1px #388DBE;
+	border-color: #3390CA;
+	background: #58B0E7;
+	background: -moz-linear-gradient(top, #B4F6FF 1px, #63D0FE 1px, #58B0E7);
+	background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.02, #B4F6FF), color-stop(0.02, #63D0FE), color-stop(1, #58B0E7));
+}
+
+#cart {
+	width: 979px;
+	height: auto;
+	margin-top: -20px;
+	position: relative;
+	background-color: #FFFFFF;
+}
+
+
