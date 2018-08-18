@@ -37,6 +37,8 @@ class Drum extends CI_Controller {
 
 		$str_links = $this -> pagination -> create_links();
 		$data["links"] = explode('&nbsp;', $str_links);
+		
+
 
 		$this -> load -> view('templates/home', $data);
 		$this -> load -> view('menu/menu');

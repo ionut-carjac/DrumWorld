@@ -95,4 +95,25 @@ ul.pagination li a:hover, ul.pagination li a.current {
 	background-color: #FFFFFF;
 }
 
+#heading {
+	padding-bottom: 10px;
+}
+#table {
+	font-size: 15px;
+	background-color: #E1E1E1;
+	width: 100%;
+}
+tr {
+	bgcolor: #FFFFFF;
+}
+#main_heading {
+	font-weight: bold;
+	padding-bottom: 10px;
+	background-color: #FFFFFF;
+}
+.fg-button.teal {
+	color: #fff;
+	border-color: #04A5A1;
+	background-color: #08BBB7;
+}
 

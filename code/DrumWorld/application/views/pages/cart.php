@@ -52,7 +52,7 @@
 
 						<?php
 						// cancel image.
-						$path = "<img src='" . base_url() . "assets/pics/cart/cart_cross.jpg' width='25px' height='20px'>";
+						$path = "<img src='" . base_url() . "assets/pics/cart/cart_cross.jpg' width='50px' height='40px'>";
 						echo anchor('cart/remove/' . $item['rowid'], $path);
 						?></td>
 						<?php endforeach; ?>
@@ -61,7 +61,7 @@
 					<td><b>Order Total: $<?php echo number_format($grand_total, 2); ?></b></td>
 
 					<?php // "clear cart" button call javascript confirmation message ?>
-					<td colspan="5" align="right"><input  class ='fg-button teal' type="button" value="Clear Cart" onclick="clearCart()">
+					<td colspan="5" align="right"><input  class ='fg-button teal' type="button" border="1pz" value="Clear Cart" onclick="clearCart()">
 
 					<?php //submit button. ?>
 					<input class ='fg-button teal'  type="submit" value="Update Cart">
