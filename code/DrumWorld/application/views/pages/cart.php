@@ -70,7 +70,7 @@
 					<!-- "Place order button" on click send "billing" controller -->
 					<tr>
 					<?php
-						echo form_open('cart/billing'); 
+						echo form_open('cart/billing');
 						echo form_hidden('cart', $cart);
 						$btn = array('class' => 'btn btn-info', 'value' => 'Place Order', 'name' => 'input');
 						echo form_submit($btn);
