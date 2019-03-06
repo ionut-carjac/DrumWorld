@@ -18,7 +18,7 @@
 							?> 
 							<div id='add_button'>
 							<?php
-							$btn = array('class' => 'btn btn-info', 'value' => 'Add to Cart', 'name' => 'action');
+							$btn = array('class' => 'btn btn-info', 'value' => 'Add to Cart', 'name' => 'action', 'onclick' => 'addedToCart()');
 
 							// Submit Button.
 							echo form_submit($btn);

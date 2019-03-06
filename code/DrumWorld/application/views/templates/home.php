@@ -18,6 +18,17 @@
 			}
 		}
 		</script>
+				<script type="text/javascript">
+		function addedToCart() {
+			var result = alert('Item added to Cart');
+// 
+			// if (result) {
+				// window.location = "<?php echo base_url(); ?>index.php/cart/remove/all";
+			// } else {
+				// return false; // cancel button
+			// }
+		}
+		</script>
 
 	</HEAD>
 
