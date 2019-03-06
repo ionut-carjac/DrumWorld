@@ -28,7 +28,7 @@
 						<td>Amount</td>
 						<td>Cancel Product</td>
 					</tr>
-					<?php 
+					<?php  
 						// Create form and send all values in "shopping/updateCart" function.
 						echo form_open('cart/updateCart');
 							$grand_total = 0;
