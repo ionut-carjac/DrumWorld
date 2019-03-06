@@ -61,14 +61,23 @@
 					<td><b>Order Total: $<?php echo number_format($grand_total, 2); ?></b></td>
 
 					<?php // "clear cart" button call javascript confirmation message ?>
-					<td colspan="5" align="right"><input  class ='fg-button teal' type="button" border="1pz" value="Clear Cart" onclick="clearCart()">
+					<td colspan="5" align="right"><input  class ='fg-button teal' type="button" border="12px" value="Clear Cart" onclick="clearCart()">
 
 					<?php //submit button. ?>
 					<input class ='fg-button teal'  type="submit" value="Update Cart">
 					<?php echo form_close(); ?>
 
 					<!-- "Place order button" on click send "billing" controller -->
-					<input class ='fg-button teal' type="button" value="Place Order" onclick="window.location = 'cart/billing'"></td>
+					<tr>
+					<?php
+						echo form_open('cart/billing');
+						echo form_hidden('cart', $cart);
+						$btn = array('class' => 'btn btn-info', 'value' => 'Place Order', 'name' => 'input');
+						echo form_submit($btn);
+						echo form_close();
+					?>
+						
+					
 					</tr>
 					<?php endif; ?>
 				</table>
