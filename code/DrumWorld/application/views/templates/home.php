@@ -18,22 +18,15 @@
 			}
 		}
 		</script>
-				<script type="text/javascript">
-		function addedToCart() {
-			var result = alert('Item added to Cart');
-// 
-			// if (result) {
-				// window.location = "<?php echo base_url(); ?>index.php/cart/remove/all";
-			// } else {
-				// return false; // cancel button
-			// }
-		}
+		<script type="text/javascript">
+			function addedToCart() {
+				window.alert('Item added to Cart');
+			}
 		</script>
 
 	</HEAD>
 
 	<BODY bgcolor="#ffffff">
-
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="<?php echo base_url(); ?>assets/css/bootstrap/js/bootstrap.min.js"></script>
 		
