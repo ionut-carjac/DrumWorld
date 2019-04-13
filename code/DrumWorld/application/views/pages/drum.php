@@ -60,7 +60,8 @@
 						<?php
 						print '</TD>';
 						print '</TR>';
-						}
+						
+					}
 		?>
 	</table>
 	

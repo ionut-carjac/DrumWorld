@@ -24,7 +24,7 @@ class Drums_model extends CI_Model {
 	}
 
 	public function fetchDrums($limit, $start) {
-		$query = $this -> mongo_db -> get("drums");
+		$query = $this -> mongo_db -> get('drums');
 		$res = array();
 		$counter = 1;
 
@@ -46,7 +46,7 @@ class Drums_model extends CI_Model {
 	public function countDrums() {
 		return $this -> mongo_db -> count("drums");
 	}
-
+	
 	private function toProductObjectList($res) {
 		$poArray = array();
 		foreach ($res as $mongo_drum) {

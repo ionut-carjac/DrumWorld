@@ -18,10 +18,15 @@
 							?> 
 							<div id='add_button'>
 							<?php
-							$btn = array('class' => 'btn btn-info', 'value' => 'Add to Cart', 'name' => 'action', 'onclick' => 'addedToCart()');
-
-							// Submit Button.
-							echo form_submit($btn);
+							$btn = array('class' => 'btn btn-info', 'value' => 'Add to Cart', 'name' => 'action', 'href' => 'echo base_url().index.php/cart/view/');
+							if ($drum_item->getStock()==null || $drum_item->getStock()==0){
+								echo'<h2><font color="red"><b>Out Of Stock</b></font></h2>';
+							}else{
+								echo"<h2><font color='green'>In Stock:<b>".$drum_item->getStock()."</b></font></h2>";
+								// Submit Button.
+								echo form_submit($btn);
+							}
+							
 							echo form_close();
 							?>
 							</div>  
