@@ -19,7 +19,7 @@ endif;
 				<div align="center">
 					<h1 align="center">Billing Info</h1>
 					<table border="0" cellpadding="2px">
-						<tr><td>Order Total:</td><td><strong>$<?php echo number_format($grand_total, 2); ?></strong></td></tr>
+						<tr><td>Order Total:</td><td><strong>€<?php echo number_format($grand_total, 2); ?></strong></td></tr>
 						<tr><td>First Name:</td><td><input type="text" name="first_name" required=""/></td></tr>
 						<tr><td>Last  Name:</td><td><input type="text" name="last_name" required=""/></td></tr>
 						<tr><td>Address:</td><td><input type="text" name="address" required="" /></td></tr>

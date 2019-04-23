@@ -49,10 +49,12 @@
 							?> 
 							<div id='add_button'>
 							<?php
-							$btn = array('class' => 'btn btn-info', 'value' => 'Add to Cart', 'name' => 'action', 'onclick' => 'addedToCart()');
-
-							// Submit Button.
-							echo form_submit($btn);
+							if ($di -> getStock()!=null && $di -> getStock()>0){
+								$btn = array('class' => 'btn btn-info', 'value' => 'Add to Cart', 'name' => 'action', 'onclick' => 'addedToCart()');
+								echo form_submit($btn);
+							}else {
+								echo'<h3><font color="red"><b>NOT IN Stock</b></font></h3>';
+							}
 							echo form_close();
 							?>
 							</div>

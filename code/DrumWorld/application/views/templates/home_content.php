@@ -55,14 +55,4 @@
 				</dl>
 				<br>
 
-				<div style="float:left">
-					<b>Store Endorsed By: </b>
-					<a href="http://www.tama.com"><img src= "<?php echo base_url()?>assets/pics/logo/tama.jpg" width="150" height="50"></a>
-					<a href="http://vicfirth.com/"><img src= "<?php echo base_url()?>assets/pics/logo/vf.jpg" width="150" height="50"></a>
-					<a href="http://sabian.com"><img src= "<?php echo base_url()?>assets/pics/logo/sabian1.jpg" width="150" height="50"></a>
-				</div>
-
-				<br>
-				<br>
-
 </div>

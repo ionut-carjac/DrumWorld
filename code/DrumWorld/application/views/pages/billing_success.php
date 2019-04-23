@@ -1,14 +1,12 @@
-<html>
-	<head>
-		<title>Billing Success</title>
-	</head>
-	<body>
-		<div id='result_div'>
-			<?php
-			// this will show you thank you message.
-			echo "<h1 align='center'>Thank You! your order has been placed!</h1>";
-			echo "<span id='go_back'><a class='fg-button teal' href=" . base_url() . "index.php/home/view>Home</a></span>";
-			?>
-		</div>
-	</body>
-</html>
+<div class="container" color="white">
+	<div align ="center">	
+		<?php
+		    echo '<img src="' . base_url(). 'assets/pics/cart/order_success_1.jpg" width="410" height="360">';
+			echo '<h2>Thank You!</h2>';
+			echo "<h3><font color='green'>Your order has been placed.</font></h3>";
+			echo '<br>';
+			echo "<span id='go_back'><a class='btn btn-info' href=" . base_url() . "index.php/home/view>Home</a></span>";
+			echo '</br>';
+		?>
+	</div>
+</div>

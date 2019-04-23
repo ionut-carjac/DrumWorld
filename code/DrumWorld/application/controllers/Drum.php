@@ -43,6 +43,7 @@ class Drum extends CI_Controller {
 		$this -> load -> view('templates/home', $data);
 		$this -> load -> view('menu/menu');
 		$this -> load -> view('pages/drum', $data);
+		$this -> load -> view('templates/page_ending');
 
 	}
 
@@ -55,6 +56,7 @@ class Drum extends CI_Controller {
 		$this -> load -> view('templates/home', $data);
 		$this -> load -> view('menu/menu');
 		$this -> load -> view('pages/drum_content', $data);
+		$this -> load -> view('templates/page_ending');
 	}
 
 }

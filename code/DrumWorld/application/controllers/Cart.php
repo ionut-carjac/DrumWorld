@@ -15,6 +15,7 @@ class Cart extends CI_Controller {
 		$this -> load -> view('templates/home', $data);
 		$this -> load -> view('menu/menu');
 		$this -> load -> view('pages/cart.php');
+		$this -> load -> view('templates/page_ending');
 
 	}
 
@@ -22,7 +23,9 @@ class Cart extends CI_Controller {
 		$insertData = array('id' => $this -> input -> post('id'), 
 							'name' => $this -> input -> post('name'), 
 							'price' => $this -> input -> post('price'), 
-							'qty' => 1);
+							'qty' => 1,
+							'options' => array('type' => $this -> input -> post('type'))
+							);
 
 		$this -> cart -> insert($insertData);
 
@@ -35,7 +38,9 @@ class Cart extends CI_Controller {
 		$insertData = array('id' => $this -> input -> post('id'), 
 							'name' => $this -> input -> post('name'), 
 							'price' => $this -> input -> post('price'), 
-							'qty' => 1);
+							'qty' => 1,
+							'options' => array('type' => $this -> input -> post('type'))
+							);
 
 		$this -> cart -> insert($insertData);
 
@@ -84,17 +89,33 @@ class Cart extends CI_Controller {
 		$this -> load -> view('templates/home', $data);
 		$this -> load -> view('menu/menu');
 		$this -> load -> view('pages/billing.php');
+		$this -> load -> view('templates/page_ending');
 	}
 
 	public function saveOrder() {
 
 		
-		if ($cart = $this -> cart -> contents()){ 
+		if ($cart = $this -> cart -> contents()){
+			
+			$grand_total = 0;
+			$type=null;
+			
+			$cart_details = array(); 
 			foreach ($cart as $item) {
-				$cart_details = array('productid' => $item['id'], 
-									  'quantity' => $item['qty'], 
-									  'price' => $item['price']
+				$grand_total = $grand_total + $item['subtotal'];
+				 if ($this->cart->has_options($item['rowid']) == TRUE){
+					foreach($this->cart->product_options($item['rowid']) as $option_name => $option_value){
+						$type=$option_value;
+					}
+				 }
+			$details = array('product_id' => $item['id'],
+							 'name' => $item['name'],		 
+							 'quantity' => $item['qty'], 
+							 'price' => $item['price'],
+							 'subtotal' => $item['subtotal'],
+							 'type' => $type,
 									  );
+			array_push($cart_details, $details);									  
 			}
 		}
 		
@@ -103,13 +124,20 @@ class Cart extends CI_Controller {
 						 'email' => $this -> input -> post('email'), 
 						 'address' => $this -> input -> post('address'), 
 						 'phone' => $this -> input -> post('phone'),
-						 'date' => date('Y-m-d'),
-						 array('product_details' => $cart_details));
+						 'order_date' => date('Y-m-d H:i:s'),
+						 'order_value' => $grand_total,
+						 'product_details' => $cart_details);						 
 		
 		$this -> cart_model -> insertOrder($order_detail);
+		
+		$this->cart->destroy();		
 
-		// After storing all imformation in database load "billing_success".
+		$data['title'] = 'Order Placed';
+		
+		$this -> load -> view('templates/home', $data);
+		$this -> load -> view('menu/menu');
 		$this -> load -> view('pages/billing_success');
+		$this -> load -> view('templates/page_ending');
 	}
 
 }

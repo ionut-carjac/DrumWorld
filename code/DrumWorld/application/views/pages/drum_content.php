@@ -9,7 +9,6 @@
 			<b><h2><?php echo $drum_item->getPrice()?></b>  EUR</h2> 
 			<?php
 
-							// Create form and send values in 'shopping/add' function.
 							echo form_open('cart/addToCart');
 							echo form_hidden('id', $drum_item -> getId());
 							echo form_hidden('name', $drum_item -> getName());
@@ -21,9 +20,9 @@
 							$btn = array('class' => 'btn btn-info', 'value' => 'Add to Cart', 'name' => 'action', 'href' => 'echo base_url().index.php/cart/view/');
 							if ($drum_item->getStock()==null || $drum_item->getStock()==0){
 								echo'<h2><font color="red"><b>Out Of Stock</b></font></h2>';
+								echo "<span id='go_back'><a class='fg-button teal' href=" . base_url() . "index.php/drum/view>Go Back</a></span>";
 							}else{
 								echo"<h2><font color='green'>In Stock:<b>".$drum_item->getStock()."</b></font></h2>";
-								// Submit Button.
 								echo form_submit($btn);
 							}
 							

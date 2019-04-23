@@ -58,7 +58,7 @@
 						<?php endforeach; ?>
 					</tr>
 					<tr>
-					<td><b>Order Total: $<?php echo number_format($grand_total, 2); ?></b></td>
+					<td><b>Order Total: €<?php echo number_format($grand_total, 2); ?></b></td>
 
 					<?php // "clear cart" button call javascript confirmation message ?>
 					<td colspan="5" align="right"><input  class ='fg-button teal' type="button" border="12px" value="Clear Cart" onclick="clearCart()">
@@ -67,7 +67,7 @@
 					<input class ='fg-button teal'  type="submit" value="Update Cart">
 					<?php echo form_close(); ?>
 
-					<!-- "Place order button" on click send "billing" controller -->
+					
 					<tr>
 					<?php
 						echo form_open('cart/billing'); 

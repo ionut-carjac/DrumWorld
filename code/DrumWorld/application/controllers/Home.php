@@ -12,6 +12,7 @@ class Home extends CI_Controller {
 		$this -> load -> view('templates/' . $page, $data);
 		$this -> load -> view('menu/menu');
 		$this -> load -> view('templates/home_content');
+		$this -> load -> view('templates/page_ending');
 
 	}
 
