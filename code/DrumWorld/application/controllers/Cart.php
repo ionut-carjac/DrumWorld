@@ -87,23 +87,26 @@ class Cart extends CI_Controller {
 	}
 
 	public function saveOrder() {
-		$customer = array('name' => $this -> input -> post('name'), 'email' => $this -> input -> post('email'), 'address' => $this -> input -> post('address'), 'phone' => $this -> input -> post('phone'));
 
-		// And store user information in database.
-		$cust_id = $this -> cart_model -> insertCustomer($customer);
-
-		$order = array('date' => date('Y-m-d'), 'customerid' => $cust_id);
-
-		$ord_id = $this -> cart_model -> insertOrder($order);
-
-		if ($cart = $this -> cart -> contents()) :
-			foreach ($cart as $item) :
-				$order_detail = array('orderid' => $ord_id, 'productid' => $item['id'], 'quantity' => $item['qty'], 'price' => $item['price']);
-
-				// Insert product imformation with order detail, store in cart also store in database.
-				$cust_id = $this -> cart_model -> insertOrderDetail($order_detail);
-			endforeach;
-		endif;
+		
+		if ($cart = $this -> cart -> contents()){ 
+			foreach ($cart as $item) {
+				$cart_details = array('productid' => $item['id'], 
+									  'quantity' => $item['qty'], 
+									  'price' => $item['price']
+									  );
+			}
+		}
+		
+		$order_detail = array('first_name' => $this -> input -> post('first_name'), 
+						 'last_name' => $this -> input -> post('last_name'),	
+						 'email' => $this -> input -> post('email'), 
+						 'address' => $this -> input -> post('address'), 
+						 'phone' => $this -> input -> post('phone'),
+						 'date' => date('Y-m-d'),
+						 array('product_details' => $cart_details));
+		
+		$this -> cart_model -> insertOrder($order_detail);
 
 		// After storing all imformation in database load "billing_success".
 		$this -> load -> view('pages/billing_success');

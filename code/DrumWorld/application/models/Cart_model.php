@@ -14,7 +14,7 @@ class Cart_model extends CI_Model {
 	}
 
 	public function insertOrder($orderObjectArray) {
-		return $this -> mongo_db -> batch_insert("order_details", $orderObjectArray);
+		return $this -> mongo_db -> insert("order_details", $orderObjectArray);
 	}
 
 	public function updateOrder($orderObjectArray) {
