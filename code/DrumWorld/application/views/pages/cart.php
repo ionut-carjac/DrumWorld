@@ -5,7 +5,7 @@
 			</div>
 			<div id="cart" >
 				<div id = "heading">
-					<h2 align="center">Products on Your Shopping Cart</h2>
+					<h2 align="center">Products in Your Shopping Cart</h2>
 				</div>
 				<div id="text">
 					<?php $cart_check = $this -> cart -> contents();

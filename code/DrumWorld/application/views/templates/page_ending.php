@@ -14,6 +14,6 @@
 		<a href="https://istanbulcymbals.com/" target="_blank"><img src= "<?php echo base_url()?>assets/pics/logo/istanbul.jpg" width="150" height="50"></a>
 		<a href="https://zildjian.com/" target="_blank"><img src= "<?php echo base_url()?>assets/pics/logo/zil.jpg" width="150" height="50"></a>
 		<a href="https://www.ludwig-drums.com/" target="_blank"><img src= "<?php echo base_url()?>assets/pics/logo/ludwig2.jpg" width="150" height="50"></a>
-		<h4><font color="white"></i>Powered By: <b>Ionut Carjac</b> @2019-@2020</i> </font></h4>
+		<h4><font color="white"></i>Powered By: <b>Ionut Carjac</b> @2016-2020</i> </font></h4>
 	</div>
 </div>
